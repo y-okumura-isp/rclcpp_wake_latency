@@ -7,6 +7,8 @@ Check ROS 2 rclcpp wake latency.
 ## Environment
 - Ubuntu 18.04
 - ROS 2 Eloquent
+- FastRTPS
+  - I didn't check other DDS.
 
 ## Build
 
@@ -41,5 +43,11 @@ now, expect, last_fin, now-expect, now-last_fin
 ```
 
 In my environment, this increased linearly...
+- Axis
+  - vertical: jitter in nano-second
+  - horizontal: number of iterations
+- Lines
+  - Blue: wake timer jitter i.e. wake up time - expected time (column 4 above)
+  - Orange: difference between wake up time - last wake up time (column 5 above)
 
-
+![jitters](https://user-images.githubusercontent.com/60122040/76944087-c2ca8900-6943-11ea-98fe-8b56401afc9a.png)
