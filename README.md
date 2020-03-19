@@ -1,6 +1,9 @@
 rclcpp_wake_latency
 ====
 
+SOLUTION: use CLOCK_MONOTONIC_RAW with clock_gettime, rcutils use this. see https://github.com/ros2/rcutils/issues/43
+
+
 ## About
 Check ROS 2 rclcpp wake latency.
 
